@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "parserOptions": {
+    "defaultSeverity": "error",
+    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "jsRules": {
+      "no-unused-expression": true
+    },
+    "ecmaFeatures": {
+      "jsx": true // Allows for the parsing of JSX
+    }
+  },
+  "rules": {
+    "member-access": 1,
+    "ordered-imports": 1,
+    "max-line-length": [1, 150],
+    "member-ordering": 1,
+    "interface-name": 1,
+    "arrow-parens": 1,
+    "object-literal-sort-keys": 1,
+    "max-classes-per-file": [1, 1]
+  }
+}

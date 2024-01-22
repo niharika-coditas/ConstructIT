@@ -1,0 +1,91 @@
+@import './typography';
+@import './constants';
+@import './mixins';
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  font-family: $primary-font;
+  color: $text-color;
+}
+
+body,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: $primary-font;
+}
+
+h1 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 32px, 120%);
+  letter-spacing: -1px;
+}
+
+h2 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 29px, 120%);
+  letter-spacing: -1px;
+}
+
+h3 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 26px, 120%);
+  letter-spacing: -1px;
+}
+
+h4 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 23px, 120%);
+  letter-spacing: -1px;
+}
+
+h5 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 20px, 120%);
+  letter-spacing: -1px;
+}
+
+h6 {
+  @include textStyling('Ubuntu-Medium', normal, 500, 18px, 120%);
+  letter-spacing: -1px;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+textarea {
+  all: unset;
+  padding: toRem(16);
+  border: 1px solid $light-gray6;
+  border-radius: 8px;
+  word-break: break-word;
+
+  &::placeholder {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: toRem(16);
+    line-height: 150%;
+    color: $primary-gray;
+  }
+}
+
+iframe {
+  border-width: 0px;
+}
+
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,73 @@
+@mixin buttonType($backgroundColor, $borderColor, $textColor) {
+  background-color: $backgroundColor;
+  border-color: $borderColor;
+  color: $textColor;
+}
+
+@mixin buttonSize($width, $height, $fontSize) {
+  min-width: $width;
+  min-height: $height;
+  font-size: $fontSize;
+}
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@mixin textStyling(
+  $fontFamily: null,
+  $fontStyle: null,
+  $fontWeight: null,
+  $fontSize: null,
+  $lineHeight: null,
+  $color: null
+) {
+  font-family: $fontFamily;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin toastMessageContainer($background, $border) {
+  display: flex;
+  align-items: center;
+  background: $background;
+  border: 1px solid $border;
+  border-radius: toRem(8);
+  padding: toRem(10);
+  justify-content: space-between;
+}
+
+@mixin toastMessageCrossIcon($fill) {
+  margin-left: toRem(10);
+  fill: $fill;
+}
+
+@mixin cardContainer() {
+  border: 1px solid $border-gray;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+}
+
+@mixin errorContainer() {
+  border-color: $primary-red !important;
+  border-radius: toRem(8) !important;
+}
+
+@mixin tooltip($padding: 0) {
+  padding: $padding !important;
+  opacity: 1 !important;
+  width: toRem(300);
+  box-shadow: $box-shadow;
+  border-radius: 8px !important;
+}
+
+@mixin gridEllipsis($width) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: $width;
+}
