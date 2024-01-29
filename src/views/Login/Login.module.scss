@@ -1,0 +1,38 @@
+@import 'src/styles/_constants';
+@import 'src/styles/_mixins.scss';
+
+.loginWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 toRem(40);
+  .loginSubWrapper {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .imageWrapper {
+      flex: 1;
+      background: radial-gradient(circle, #841bc4, #1039a2);
+      opacity: 0.6;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .formWrapper {
+      flex: 1;
+      .form {
+        padding: toRem(10) toRem(20);
+        .field {
+          display: flex;
+          flex-direction: column;
+          margin-top: toRem(32);
+          grid-gap: toRem(6);
+        }
+        .buttonWrapper {
+          margin-top: toRem(32);
+        }
+      }
+    }
+  }
+}

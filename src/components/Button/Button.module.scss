@@ -1,0 +1,43 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.buttonMain {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: toRem(10) toRem(16);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include textStyling($primary-font, normal, 600, 16px, 120%);
+
+  .spinnerWrapper {
+    margin-right: toRem(6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.buttonTypePrimary {
+    @include buttonType($primary-violet, $primary-violet, $white);
+  }
+
+  &.buttonTypeSecondary {
+    @include buttonType($white, $primary-violet, $primary-violet);
+  }
+
+  &.buttonTypeTertiary {
+    @include buttonType($white, $white, $primary-violet);
+  }
+
+  //fullWidth
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+}

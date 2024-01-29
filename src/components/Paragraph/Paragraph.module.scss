@@ -1,0 +1,42 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.pMain {
+  @include textStyling($primary-font, normal, 400, toRem(16), 150%);
+
+  &.typeDefault {
+    font-size: toRem(16);
+  }
+
+  &.typeS {
+    font-size: toRem(14);
+  }
+
+  &.typeXS {
+    font-size: toRem(12);
+  }
+
+  &.typeLabel {
+    @include textStyling($primary-font, normal, 600, toRem(16), 120%);
+  }
+
+  &.typeFieldLabel {
+    @include textStyling($primary-font, normal, 400, 14px, 150%, $primary-gray);
+  }
+
+  &.typeError {
+    @include textStyling(
+      $primary-font,
+      normal,
+      400,
+      toRem(14),
+      150%,
+      $primary-red
+    );
+  }
+
+  //bold
+  &.bold {
+    font-weight: 600;
+  }
+}
