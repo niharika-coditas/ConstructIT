@@ -1,0 +1,52 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.sidebarContainer {
+  background-color: $light-gray15;
+  border-right: 1px solid $border-gray;
+  width: 200px;
+  height: 100vh;
+
+  .companyInfo {
+    background-color: $light-gray16;
+    border-radius: 4px;
+    padding: toRem(4) toRem(8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: toRem(8);
+    margin: toRem(16);
+  }
+
+  .menuWrapper {
+    border-top: 1px solid $border-gray;
+    padding: toRem(16);
+    color: $sidebar-text;
+    margin-bottom: toRem(16);
+
+    .menuSubWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: toRem(12);
+      margin-bottom: toRem(32);
+      .menuItem {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(16);
+        font-weight: 600;
+        & > a {
+          text-decoration: none;
+          position: relative;
+          color: $primary-gray;
+
+          .activeDiv {
+            background-color: $white;
+            padding: toRem(6);
+            border-radius: 4px;
+            border: 1px solid $border-gray;
+          }
+        }
+      }
+    }
+  }
+}

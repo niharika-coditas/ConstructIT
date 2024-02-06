@@ -1,0 +1,17 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.dashboardWrapper {
+  padding: toRem(24);
+  .widgetsWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+  }
+  .barGraphWrapper {
+    margin-top: toRem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

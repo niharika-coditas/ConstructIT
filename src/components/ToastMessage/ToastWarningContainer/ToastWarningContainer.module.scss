@@ -1,0 +1,25 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.root {
+  @include toastMessageContainer($background-yellow, $primary-yellow);
+
+  .messageContainer {
+    display: flex;
+    align-items: center;
+
+    .warningIcon {
+      height: toRem(20);
+      width: toRem(20);
+      margin-right: toRem(10);
+    }
+
+    .paragraph {
+      color: $primary-yellow;
+    }
+  }
+
+  .crossIcon {
+    @include toastMessageCrossIcon($primary-yellow);
+  }
+}

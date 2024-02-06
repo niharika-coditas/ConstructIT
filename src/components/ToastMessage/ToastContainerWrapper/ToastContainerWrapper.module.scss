@@ -1,0 +1,13 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.toast {
+  padding: 0;
+  min-height: auto;
+  box-shadow: none;
+  border-radius: toRem(8);
+
+  .toastBody {
+    padding: 0;
+  }
+}

@@ -1,4 +1,4 @@
-@import 'src/styles/_constants';
+@import 'src/styles/_constants.scss';
 @import 'src/styles/_mixins.scss';
 
 .loginWrapper {
@@ -22,15 +22,21 @@
     .formWrapper {
       flex: 1;
       .form {
-        padding: toRem(10) toRem(20);
+        padding: toRem(30) toRem(20) toRem(20) toRem(20);
         .field {
           display: flex;
           flex-direction: column;
           margin-top: toRem(32);
           grid-gap: toRem(6);
+          .required {
+            color: $primary-red;
+          }
+          .errorVisibility {
+            visibility: hidden;
+          }
         }
         .buttonWrapper {
-          margin-top: toRem(32);
+          margin-top: toRem(40);
         }
       }
     }

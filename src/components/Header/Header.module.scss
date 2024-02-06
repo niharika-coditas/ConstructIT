@@ -1,0 +1,39 @@
+@import 'src/styles/_constants.scss';
+@import 'src/styles/_mixins.scss';
+
+.headerWrapper {
+  background-color: $light-gray15;
+  height: 77px;
+  border-bottom: 1px solid $border-gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 toRem(24);
+
+  .header {
+    font-size: larger;
+    font-weight: 800;
+    letter-spacing: 0.25px;
+  }
+
+  .profileWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(8);
+    background-color: $light-gray16;
+    border-radius: 24px;
+    padding: 0 toRem(12);
+    height: toRem(42);
+    white-space: nowrap;
+
+    .pictureWrapper {
+      background-color: $light-gray2;
+      border-radius: 50%;
+      width: toRem(28);
+      height: toRem(28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
